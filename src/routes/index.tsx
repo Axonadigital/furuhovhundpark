@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, Clock, Coins, ArrowRight, PawPrint } from "lucide-react";
+import { MapPin, Clock, Coins, ArrowRight, PawPrint, Star, Quote } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
 import heroImage from "@/assets/hero-as.jpg";
 import parkInfoImage from "@/assets/parkinformation.png";
@@ -117,6 +117,51 @@ const RULES = [
   "Det är inte tillåtet att använda parkerna för organiserad kursverksamhet.",
   "Sjuka hundar stannar hemma (smittsam sjukdom).",
   "Se parken som ett område för lek och träning, ej som toalett. Rasta innan ert besök.",
+];
+
+const REVIEWS = [
+  {
+    name: "Niklas Malmgren",
+    date: "2023-04-11",
+    rating: 5,
+    title: "Hundägare",
+    body: "Så häftigt att vår nya valp fick och kunde springa fritt! Vilken lycklig hund! Så bra att detta finns, all heder till dig som fixat dessa parker!",
+  },
+  {
+    name: "Joanna Eriksson",
+    date: "2023-05-22",
+    rating: 5,
+    title: "Trivsel",
+    body: "Trivs alltid lika bra här. Klockrent ställe! Perfekt med en nyligt mottagen omplacering som också behöver få springa lös.",
+  },
+  {
+    name: "Britta",
+    date: "2025-12-04",
+    rating: 5,
+    title: "Labradorägare",
+    body: "Jättebra park, här trivs vi!",
+  },
+  {
+    name: "Niklas Malmgren",
+    date: "2023-04-11",
+    rating: 5,
+    title: "Valpägare",
+    body: "Som vanligt så bra! Hunden stortrivs!",
+  },
+  {
+    name: "Helena Persson Einarsson",
+    date: "2026-05-08",
+    rating: 5,
+    title: "Tipptopp",
+    body: "Massagetimmen är alltid så välgörande.",
+  },
+  {
+    name: "Peder Majiet",
+    date: "2026-01-19",
+    rating: 5,
+    title: "Perfekt",
+    body: "Kommer tillbaka!",
+  },
 ];
 
 function HomePage() {
@@ -286,6 +331,22 @@ function HomePage() {
         </div>
       </section>
 
+      {/* REVIEWS */}
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <div className="max-w-2xl">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Recensioner</p>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-wide">Vad våra besökare säger</h2>
+          <p className="mt-3 text-muted-foreground">
+            Hundägare från Östersund, Ås och övriga Jämtland delar med sig av sina besök på Furuhov.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {REVIEWS.map((r, i) => (
+            <ReviewCard key={i} {...r} />
+          ))}
+        </div>
+      </section>
+
       {/* RULES */}
       <section id="regler" className="bg-secondary">
        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
@@ -422,6 +483,41 @@ function Step({ n, title, text }: { n: number; title: string; text: string }) {
       <h3 className="mt-2 font-display text-2xl tracking-wide text-card-foreground">{title}</h3>
       <p className="mt-2 text-sm text-card-foreground/80">{text}</p>
     </li>
+  );
+}
+
+function ReviewCard({
+  name,
+  date,
+  rating,
+  title,
+  body,
+}: {
+  name: string;
+  date: string;
+  rating: number;
+  title: string;
+  body: string;
+}) {
+  return (
+    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+      <Quote size={28} className="text-primary/30" aria-hidden="true" />
+      <div className="mt-3 flex items-center gap-1" aria-label={`${rating} av 5 stjärnor`}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            size={16}
+            className={i < rating ? "fill-primary text-primary" : "text-muted-foreground/30"}
+          />
+        ))}
+      </div>
+      <h3 className="mt-3 font-display text-xl tracking-wide text-card-foreground">{title}</h3>
+      <p className="mt-2 text-sm text-card-foreground/80 leading-relaxed">{body}</p>
+      <div className="mt-5 pt-4 border-t border-border flex items-center justify-between text-xs">
+        <span className="font-semibold text-card-foreground">{name}</span>
+        <time className="text-muted-foreground" dateTime={date}>{date}</time>
+      </div>
+    </article>
   );
 }
 
