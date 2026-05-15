@@ -129,7 +129,7 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/25 to-forest/60" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/40" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 pt-40 md:pt-56 pb-28 md:pb-40">
           <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
             Östersund · Ås
