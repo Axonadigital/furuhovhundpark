@@ -542,7 +542,7 @@ function ReviewCard({
           />
         ))}
       </div>
-      <h3 className="mt-3 font-display text-xl tracking-wide text-card-foreground">{title}</h3>
+      <h3 className="mt-3 text-2xl italic font-medium tracking-tight text-card-foreground" style={{ fontFamily: '"Fraunces", Georgia, serif' }}>{title}</h3>
       <p className="mt-2 text-sm text-card-foreground/80 leading-relaxed">{body}</p>
       <div className="mt-5 pt-4 border-t border-border flex items-center justify-between text-xs">
         <span className="font-semibold text-card-foreground">{name}</span>
