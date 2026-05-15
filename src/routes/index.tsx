@@ -137,10 +137,10 @@ function HomePage() {
             Östersund · Ås
           </p>
           <h1 className="mt-3 font-display text-5xl md:text-7xl tracking-wide max-w-3xl">
-            Släpp hunden lös — i lugn och ro
+            Furuhov Hundparker
           </h1>
           <p className="mt-5 max-w-xl text-lg text-forest-foreground/85">
-            Två stängslade hundparker i Östersund och Ås. Öppet dygnet runt.
+            Släpp hunden lös i lugn skogsmiljö — Östersund & Ås, dygnet runt.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
