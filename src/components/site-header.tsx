@@ -17,7 +17,7 @@ export function SiteHeader() {
             alt="Furuhov Hundpark logotyp"
             width={180}
             height={40}
-            className="h-9 w-auto"
+            className="h-16 md:h-20 w-auto"
           />
         </Link>
 
