@@ -185,16 +185,16 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/40" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-48 pb-24 md:pb-32">
-          <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
+          <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold text-center md:text-left">
             Östersund · Ås
           </p>
-          <h1 className="mt-3 font-display text-5xl md:text-7xl tracking-wide max-w-3xl">
+          <h1 className="mt-3 font-display text-5xl md:text-7xl tracking-wide max-w-3xl text-center md:text-left">
             Furuhov Hundparker
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-forest-foreground/85">
+          <p className="mt-5 max-w-xl text-lg text-forest-foreground/85 text-center md:text-left mx-auto md:mx-0">
             Släpp hunden lös i lugn skogsmiljö — Östersund & Ås, dygnet runt.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
             <a
               href={BOKA_URL}
               target="_blank"
