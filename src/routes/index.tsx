@@ -389,6 +389,15 @@ function ParkCard({
   );
 }
 
+function InfoItem({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <li className="border-l-2 border-primary pl-4">
+      <h3 className="font-display text-xl tracking-wide">{title}</h3>
+      <p className="mt-1 text-sm text-card-foreground/80">{children}</p>
+    </li>
+  );
+}
+
 function Step({ n, title, text }: { n: number; title: string; text: string }) {
   return (
     <li className="rounded-xl bg-card border border-border p-6">
