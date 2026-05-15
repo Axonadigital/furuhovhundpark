@@ -241,7 +241,7 @@ function HomePage() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div className="relative overflow-hidden rounded-2xl border border-border aspect-[4/3] bg-muted">
             <img
-              src={heroImage}
+              src={parkInfoImage}
               alt="Furuhov Hundpark — stängslad skogsmiljö med vindskydd och fikaplats"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
