@@ -136,12 +136,10 @@ function HomePage() {
             Östersund · Ås
           </p>
           <h1 className="mt-3 font-display text-5xl md:text-7xl tracking-wide max-w-3xl">
-            Hundpark i Östersund och Ås — släpp hunden lös i lugn och ro
+            Släpp hunden lös — i lugn och ro
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-forest-foreground/85">
-            Furuhov driver två stängslade hundparker i fin skogsmiljö nära centrala
-            Östersund. Boka en halvtimme när det passar dig — öppet dygnet runt,
-            året runt.
+          <p className="mt-5 max-w-xl text-lg text-forest-foreground/85">
+            Två stängslade hundparker i Östersund och Ås. Öppet dygnet runt.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
