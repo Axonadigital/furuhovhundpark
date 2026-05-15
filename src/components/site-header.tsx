@@ -9,15 +9,15 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-forest text-forest-foreground border-b border-forest/40 shadow-sm">
-      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 bg-forest text-forest-foreground border-b border-forest/40 shadow-sm overflow-visible">
+      <div className="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2" aria-label="Furuhov Hundpark — startsida">
           <img
             src={logo}
             alt="Furuhov Hundpark logotyp"
-            width={180}
-            height={40}
-            className="h-16 md:h-20 w-auto"
+            width={320}
+            height={80}
+            className="h-16 md:h-20 w-auto -my-6"
           />
         </Link>
 
