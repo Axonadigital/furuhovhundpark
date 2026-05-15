@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/furuhov-logo.png";
 
@@ -7,9 +7,25 @@ const BOKA_URL = "https://furuhov.bokamera.se";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const solid = scrolled || open;
 
   return (
-    <header className="sticky top-0 z-50 bg-forest text-forest-foreground border-b border-forest/40 shadow-sm overflow-visible">
+    <header
+      className={`fixed top-0 inset-x-0 z-50 text-forest-foreground overflow-visible transition-colors duration-300 ${
+        solid
+          ? "bg-forest border-b border-forest/40 shadow-sm"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2" aria-label="Furuhov Hundpark — startsida">
           <img
