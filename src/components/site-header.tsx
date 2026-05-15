@@ -10,14 +10,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-forest text-forest-foreground border-b border-forest/40 shadow-sm overflow-visible">
-      <div className="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-4">
+      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2" aria-label="Furuhov Hundpark — startsida">
           <img
             src={logo}
             alt="Furuhov Hundpark logotyp"
-            width={320}
-            height={80}
-            className="h-16 md:h-20 w-auto -my-6"
+            width={400}
+            height={100}
+            className="h-20 md:h-24 w-auto -my-4"
           />
         </Link>
 
