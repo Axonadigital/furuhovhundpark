@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Clock, Coins, ArrowRight, PawPrint } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
+import heroImage from "@/assets/hero-furuhov.jpg";
 
 const TITLE = "Hundpark i Östersund och Ås | Furuhov Hundpark";
 const DESCRIPTION =
@@ -120,6 +121,14 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative bg-forest text-forest-foreground overflow-hidden">
+        <img
+          src={heroImage}
+          alt="Hundägare med hund vid Furuhov Hundparks grind i jämtländsk skogsmiljö"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/85 via-forest/70 to-forest/95" aria-hidden="true" />
         <ForestSilhouette />
         <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
