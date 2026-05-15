@@ -65,8 +65,6 @@ export const Route = createFileRoute("/as")({
 function AsPage() {
   return (
     <>
-      <Breadcrumbs current="Hundpark Ås" />
-
       <section className="bg-forest text-forest-foreground">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Ås · Krokoms kommun</p>
