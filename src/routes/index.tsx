@@ -183,17 +183,19 @@ function HomePage() {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/40" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/50 md:from-forest/20 md:via-forest/10 md:to-forest/40" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-48 pb-24 md:pb-32">
-          <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
-            Östersund · Ås
-          </p>
-          <h1 className="mt-3 font-display text-5xl md:text-7xl tracking-wide max-w-3xl">
-            Furuhov Hundparker
-          </h1>
-          <p className="mt-5 max-w-xl text-lg text-forest-foreground/85">
-            Släpp hunden lös i lugn skogsmiljö — Östersund & Ås, dygnet runt.
-          </p>
+          <div className="md:bg-transparent md:backdrop-blur-none md:border-0 md:p-0 md:rounded-none rounded-2xl bg-forest/40 backdrop-blur-sm border border-forest-foreground/10 p-5 inline-block max-w-full">
+            <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
+              Östersund · Ås
+            </p>
+            <h1 className="mt-3 font-display text-5xl md:text-7xl tracking-wide max-w-3xl">
+              Furuhov Hundparker
+            </h1>
+            <p className="mt-5 max-w-xl text-lg text-forest-foreground/90">
+              Släpp hunden lös i lugn skogsmiljö — Östersund & Ås, dygnet runt.
+            </p>
+          </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={BOKA_URL}
