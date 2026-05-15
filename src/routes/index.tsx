@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Clock, Coins, ArrowRight, PawPrint, Star, Quote } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
-import heroImage from "@/assets/hero-as.jpg";
+import heroImage from "@/assets/hero-furuhov.jpg";
 import parkInfoImage from "@/assets/parkinformation.png";
 import cardOstersund from "@/assets/card-ostersund.png";
 import cardAs from "@/assets/card-as.png";
