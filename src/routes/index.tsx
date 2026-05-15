@@ -211,7 +211,7 @@ function HomePage() {
             </Link>
           </div>
 
-          <dl className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+          <dl className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl rounded-2xl bg-forest/40 backdrop-blur-sm border border-forest-foreground/10 p-5 md:bg-transparent md:backdrop-blur-none md:border-0 md:p-0 md:rounded-none">
             <Stat icon={<Clock size={18} />} label="Öppet" value="Dygnet runt" />
             <Stat icon={<Coins size={18} />} label="Pris" value="40 kr / 30 min" />
             <Stat icon={<PawPrint size={18} />} label="Storlek" value="Ca 3 ha / park" />
