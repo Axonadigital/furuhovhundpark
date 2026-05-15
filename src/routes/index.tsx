@@ -531,7 +531,7 @@ function ReviewCard({
   body: string;
 }) {
   return (
-    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+    <article className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
       <Quote size={28} className="text-primary/30" aria-hidden="true" />
       <div className="mt-3 flex items-center gap-1" aria-label={`${rating} av 5 stjärnor`}>
         {Array.from({ length: 5 }).map((_, i) => (
