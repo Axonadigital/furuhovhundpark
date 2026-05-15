@@ -331,6 +331,22 @@ function HomePage() {
         </div>
       </section>
 
+      {/* REVIEWS */}
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <div className="max-w-2xl">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Recensioner</p>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-wide">Vad våra besökare säger</h2>
+          <p className="mt-3 text-muted-foreground">
+            Hundägare från Östersund, Ås och övriga Jämtland delar med sig av sina besök på Furuhov.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {REVIEWS.map((r, i) => (
+            <ReviewCard key={i} {...r} />
+          ))}
+        </div>
+      </section>
+
       {/* RULES */}
       <section id="regler" className="bg-secondary">
        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
