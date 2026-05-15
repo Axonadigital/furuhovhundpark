@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, Coins, ChevronRight } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
+import heroOstersund from "@/assets/hero-ostersund.jpg";
 
 const TITLE = "Hundpark i Östersund — Furuhov | Boka tid";
 const DESCRIPTION =
@@ -65,8 +66,16 @@ function OstersundPage() {
   return (
     <>
 
-      <section className="bg-forest text-forest-foreground">
-        <div className="mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
+      <section className="relative bg-forest text-forest-foreground overflow-hidden">
+        <img
+          src={heroOstersund}
+          alt="Skogsmiljö i Furulund, Östersund — där Furuhov Hundpark ligger"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-forest/35 to-forest/70" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Furulund · Östersund</p>
           <h1 className="mt-3 font-display text-5xl md:text-6xl tracking-wide max-w-3xl">
             Hundpark i Östersund — Furuhov Furulund
