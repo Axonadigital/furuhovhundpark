@@ -77,13 +77,13 @@ function OstersundPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-forest/25 via-forest/15 to-forest/45" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Furulund · Östersund</p>
-          <h1 className="mt-3 font-display text-5xl md:text-6xl tracking-wide max-w-3xl">
-            Hundpark i Östersund — Furuhov Furulund
+          <h1 className="mt-3 font-display text-4xl md:text-6xl tracking-wide max-w-3xl">
+            <span className="md:hidden">Hundpark i Östersund</span>
+            <span className="hidden md:inline">Hundpark i Östersund — Furuhov Furulund</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-forest-foreground/85">
-            Belägen i utkanten av Östersund i området Furulund. Ca 3 ha i en fin
-            park- och skogsmiljö — tänkt som en naturlig mötesplats för alla hundar
-            och hundägare i Jämtland.
+          <p className="mt-5 max-w-2xl text-base md:text-lg text-forest-foreground/85">
+            <span className="md:hidden">Ca 3 ha stängslad skogsmiljö i Furulund — en mötesplats för hundar i Jämtland.</span>
+            <span className="hidden md:inline">Belägen i utkanten av Östersund i området Furulund. Ca 3 ha i en fin park- och skogsmiljö — tänkt som en naturlig mötesplats för alla hundar och hundägare i Jämtland.</span>
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
