@@ -66,7 +66,7 @@ function AsPage() {
   return (
     <>
       <section className="bg-forest text-forest-foreground">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Ås · Krokoms kommun</p>
           <h1 className="mt-3 font-display text-5xl md:text-6xl tracking-wide max-w-3xl">
             Hundpark i Ås — Furuhov Åsparken

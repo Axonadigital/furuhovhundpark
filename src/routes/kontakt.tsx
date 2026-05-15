@@ -54,7 +54,7 @@ function KontaktPage() {
         </ol>
       </nav>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <section className="mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-12 md:pb-16">
         <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Hör av dig</p>
         <h1 className="mt-3 font-display text-5xl md:text-6xl tracking-wide">
           Kontakta Furuhov Hundpark

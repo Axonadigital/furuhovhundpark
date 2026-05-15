@@ -131,7 +131,7 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/25 to-forest/60" aria-hidden="true" />
         <ForestSilhouette />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+        <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-40 pb-20 md:pb-28">
           <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
             Östersund · Ås
           </p>
