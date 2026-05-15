@@ -88,8 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Furuhov Hundpark offers two dog parks near central Östersund for dog owners to exercise their pets." },
       { property: "og:description", content: "Furuhov Hundpark offers two dog parks near central Östersund for dog owners to exercise their pets." },
       { name: "twitter:description", content: "Furuhov Hundpark offers two dog parks near central Östersund for dog owners to exercise their pets." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e5ecc07f-933e-4989-a4e3-ad7e137f76e4/id-preview-e2707286--0faaac1f-d75e-4a5a-8910-b83361131ebc.lovable.app-1778833813396.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e5ecc07f-933e-4989-a4e3-ad7e137f76e4/id-preview-e2707286--0faaac1f-d75e-4a5a-8910-b83361131ebc.lovable.app-1778833813396.png" },
+      { property: "og:image", content: "/og-image.png" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
