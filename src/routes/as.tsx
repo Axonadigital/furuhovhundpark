@@ -77,13 +77,13 @@ function AsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-forest/25 via-forest/15 to-forest/45" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Ås · Krokoms kommun</p>
-          <h1 className="mt-3 font-display text-5xl md:text-6xl tracking-wide max-w-3xl">
-            Hundpark i Ås — Furuhov Åsparken
+          <h1 className="mt-3 font-display text-4xl md:text-6xl tracking-wide max-w-3xl">
+            <span className="md:hidden">Hundpark i Ås</span>
+            <span className="hidden md:inline">Hundpark i Ås — Furuhov Åsparken</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-forest-foreground/85">
-            Belägen längs gamla E75:an nedanför Torsta. Ca 3 ha stängslad fin
-            skogsmiljö med vindskydd och fikaplats — perfekt för hundpromenaden i
-            Ås och övriga Jämtland.
+          <p className="mt-5 max-w-2xl text-base md:text-lg text-forest-foreground/85">
+            <span className="md:hidden">Ca 3 ha stängslad skogsmiljö längs gamla E75:an med vindskydd och fikaplats.</span>
+            <span className="hidden md:inline">Belägen längs gamla E75:an nedanför Torsta. Ca 3 ha stängslad fin skogsmiljö med vindskydd och fikaplats — perfekt för hundpromenaden i Ås och övriga Jämtland.</span>
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
