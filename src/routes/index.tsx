@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Clock, Coins, ArrowRight, PawPrint } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
 import heroImage from "@/assets/hero-furuhov.jpg";
+import parkInfoImage from "@/assets/parkinformation.png";
 
 const TITLE = "Hundpark i Östersund och Ås | Furuhov Hundpark";
 const DESCRIPTION =
@@ -240,7 +241,7 @@ function HomePage() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div className="relative overflow-hidden rounded-2xl border border-border aspect-[4/3] bg-muted">
             <img
-              src={heroImage}
+              src={parkInfoImage}
               alt="Furuhov Hundpark — stängslad skogsmiljö med vindskydd och fikaplats"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
