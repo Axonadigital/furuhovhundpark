@@ -304,6 +304,7 @@ function HomePage() {
             ))}
           </ol>
         </div>
+        </div>
       </section>
 
       {/* CONTACT */}
