@@ -486,6 +486,41 @@ function Step({ n, title, text }: { n: number; title: string; text: string }) {
   );
 }
 
+function ReviewCard({
+  name,
+  date,
+  rating,
+  title,
+  body,
+}: {
+  name: string;
+  date: string;
+  rating: number;
+  title: string;
+  body: string;
+}) {
+  return (
+    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+      <Quote size={28} className="text-primary/30" aria-hidden="true" />
+      <div className="mt-3 flex items-center gap-1" aria-label={`${rating} av 5 stjärnor`}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            size={16}
+            className={i < rating ? "fill-primary text-primary" : "text-muted-foreground/30"}
+          />
+        ))}
+      </div>
+      <h3 className="mt-3 font-display text-xl tracking-wide text-card-foreground">{title}</h3>
+      <p className="mt-2 text-sm text-card-foreground/80 leading-relaxed">{body}</p>
+      <div className="mt-5 pt-4 border-t border-border flex items-center justify-between text-xs">
+        <span className="font-semibold text-card-foreground">{name}</span>
+        <time className="text-muted-foreground" dateTime={date}>{date}</time>
+      </div>
+    </article>
+  );
+}
+
 function ForestSilhouette() {
   return (
     <svg
