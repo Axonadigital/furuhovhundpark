@@ -1,5 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Clock, Coins, ArrowRight, PawPrint, Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
 import heroImage from "@/assets/hero-furuhov.jpg";
 import parkInfoImage from "@/assets/parkinformation.png";
@@ -177,7 +184,7 @@ function HomePage() {
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/40" aria-hidden="true" />
-        <div className="relative mx-auto max-w-6xl px-4 pt-28 md:pt-40 pb-20 md:pb-28">
+        <div className="relative mx-auto max-w-6xl px-4 pt-36 md:pt-56 pb-28 md:pb-40">
           <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
             Östersund · Ås
           </p>
@@ -332,7 +339,7 @@ function HomePage() {
       </section>
 
       {/* REVIEWS */}
-      <section className="py-16 md:py-20 overflow-hidden">
+      <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Recensioner</p>
@@ -341,18 +348,23 @@ function HomePage() {
               Hundägare från Östersund, Ås och övriga Jämtland delar med sig av sina besök på Furuhov.
             </p>
           </div>
-        </div>
-        <div className="mt-10 marquee-mask overflow-hidden">
-          <div className="marquee-track flex gap-5">
-            {[...REVIEWS, ...REVIEWS].map((r, i) => (
-              <div key={i} className="w-[300px] sm:w-[340px] shrink-0">
-                <ReviewCard {...r} />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="mx-auto max-w-6xl px-4 mt-8 text-center">
-          <p className="text-sm text-muted-foreground">
+
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            className="mt-10 px-10 md:px-14"
+          >
+            <CarouselContent className="-ml-4">
+              {REVIEWS.map((r, i) => (
+                <CarouselItem key={i} className="pl-4 sm:basis-1/2 lg:basis-1/3">
+                  <ReviewCard {...r} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-2 md:-left-4" />
+            <CarouselNext className="-right-2 md:-right-4" />
+          </Carousel>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground">
             Läs alla recensioner på{" "}
             <a
               href="https://furuhov.bokamera.se/reviews?sitePath=furuhov"
@@ -519,7 +531,7 @@ function ReviewCard({
   body: string;
 }) {
   return (
-    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+    <article className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
       <Quote size={28} className="text-primary/30" aria-hidden="true" />
       <div className="mt-3 flex items-center gap-1" aria-label={`${rating} av 5 stjärnor`}>
         {Array.from({ length: 5 }).map((_, i) => (
