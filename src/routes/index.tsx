@@ -391,7 +391,7 @@ function ParkCard({
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/70 to-forest/30" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-t from-forest/85 via-forest/30 to-transparent" aria-hidden="true" />
       <div className="relative flex h-full flex-col justify-end p-8 text-forest-foreground">
         <div className="flex items-center gap-2 text-sm text-forest-foreground/80">
           <MapPin size={16} /> {location}
