@@ -237,7 +237,7 @@ function HomePage() {
       {/* PARK INFO */}
       <section id="parkinformation" className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <div className="grid gap-10 lg:grid-cols-2 items-center">
-          <div className="relative overflow-hidden rounded-2xl border border-border aspect-[4/3] bg-muted">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-muted h-full min-h-[420px] lg:min-h-[640px]">
             <img
               src={parkInfoImage}
               alt="Furuhov Hundpark — stängslad skogsmiljö med vindskydd och fikaplats"
