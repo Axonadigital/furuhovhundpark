@@ -3,7 +3,7 @@ import { Mail, Phone, Facebook } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-forest text-forest-foreground mt-16">
+    <footer className="bg-[oklch(0.12_0.02_155)] text-forest-foreground">
       <div className="mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <p className="font-display text-3xl tracking-wide">FURUHOV HUNDPARK</p>
