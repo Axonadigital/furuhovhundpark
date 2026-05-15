@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, Coins, ChevronRight } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
-import heroOstersund from "@/assets/hero-ostersund.jpg";
+import heroOstersund from "@/assets/hero-furuhov.jpg";
 
 const TITLE = "Hundpark i Östersund — Furuhov | Boka tid";
 const DESCRIPTION =
