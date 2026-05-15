@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, Coins } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
 import { Breadcrumbs, CtaSection } from "./ostersund";
-import heroAs from "@/assets/hero-as-forest.jpg";
+import heroAs from "@/assets/hero-as.jpg";
 
 const TITLE = "Hundpark i Ås — Furuhov | Boka tid";
 const DESCRIPTION =
