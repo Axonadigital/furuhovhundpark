@@ -1,12 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, Facebook } from "lucide-react";
+import logo from "@/assets/furuhov-logo.png";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[oklch(0.12_0.02_155)] text-forest-foreground">
       <div className="mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="font-display text-3xl tracking-wide">FURUHOV HUNDPARK</p>
+          <img
+            src={logo}
+            alt="Furuhov Hundpark logotyp"
+            width={400}
+            height={100}
+            className="h-24 w-auto -ml-2"
+          />
           <p className="mt-3 text-sm text-forest-foreground/80 max-w-md">
             Två stängslade hundparker i fin skogsmiljö nära Östersund. Öppet dygnet
             runt, året runt — boka en halvtimme och släpp hunden lös.
