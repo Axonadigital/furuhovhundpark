@@ -23,7 +23,7 @@ export const Route = createFileRoute("/integritetspolicy")({
 
 function PolicyPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 md:py-16">
+    <article className="mx-auto max-w-3xl px-4 pt-32 md:pt-36 pb-12 md:pb-16">
       <nav aria-label="Brödsmulor">
         <ol className="flex items-center gap-1 text-sm text-muted-foreground">
           <li><Link to="/" className="hover:text-primary">Start</Link></li>
