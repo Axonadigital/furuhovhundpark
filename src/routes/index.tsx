@@ -119,6 +119,51 @@ const RULES = [
   "Se parken som ett område för lek och träning, ej som toalett. Rasta innan ert besök.",
 ];
 
+const REVIEWS = [
+  {
+    name: "Niklas Malmgren",
+    date: "2023-04-11",
+    rating: 5,
+    title: "Hundägare",
+    body: "Så häftigt att vår nya valp fick och kunde springa fritt! Vilken lycklig hund! Så bra att detta finns, all heder till dig som fixat dessa parker!",
+  },
+  {
+    name: "Joanna Eriksson",
+    date: "2023-05-22",
+    rating: 5,
+    title: "Trivsel",
+    body: "Trivs alltid lika bra här. Klockrent ställe! Perfekt med en nyligt mottagen omplacering som också behöver få springa lös.",
+  },
+  {
+    name: "Britta",
+    date: "2025-12-04",
+    rating: 5,
+    title: "Labradorägare",
+    body: "Jättebra park, här trivs vi!",
+  },
+  {
+    name: "Niklas Malmgren",
+    date: "2023-04-11",
+    rating: 5,
+    title: "Valpägare",
+    body: "Som vanligt så bra! Hunden stortrivs!",
+  },
+  {
+    name: "Helena Persson Einarsson",
+    date: "2026-05-08",
+    rating: 5,
+    title: "Tipptopp",
+    body: "Massagetimmen är alltid så välgörande.",
+  },
+  {
+    name: "Peder Majiet",
+    date: "2026-01-19",
+    rating: 5,
+    title: "Perfekt",
+    body: "Kommer tillbaka!",
+  },
+];
+
 function HomePage() {
   return (
     <>
