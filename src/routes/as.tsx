@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, Coins } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
 import { Breadcrumbs, CtaSection } from "./ostersund";
+import heroAs from "@/assets/hero-as.jpg";
 
 const TITLE = "Hundpark i Ås — Furuhov | Boka tid";
 const DESCRIPTION =
@@ -65,8 +66,16 @@ export const Route = createFileRoute("/as")({
 function AsPage() {
   return (
     <>
-      <section className="bg-forest text-forest-foreground">
-        <div className="mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
+      <section className="relative bg-forest text-forest-foreground overflow-hidden">
+        <img
+          src={heroAs}
+          alt="Snötäckt skogsmiljö vid Furuhov Hundpark i Ås med hund i förgrunden"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/25 via-forest/15 to-forest/45" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-36 pb-14 md:pb-20">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Ås · Krokoms kommun</p>
           <h1 className="mt-3 font-display text-5xl md:text-6xl tracking-wide max-w-3xl">
             Hundpark i Ås — Furuhov Åsparken
