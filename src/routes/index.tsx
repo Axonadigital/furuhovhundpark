@@ -235,8 +235,56 @@ function HomePage() {
         </div>
       </section>
 
+      {/* PARK INFO */}
+      <section id="parkinformation" className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
+          <div className="relative overflow-hidden rounded-2xl border border-border aspect-[4/3] bg-muted">
+            <img
+              src={heroImage}
+              alt="Furuhov Hundpark — stängslad skogsmiljö med vindskydd och fikaplats"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <h2 className="font-display text-4xl md:text-5xl tracking-wide">Parkinformation</h2>
+            <p className="mt-3 text-muted-foreground">
+              Bra att veta innan ditt besök i någon av våra parker.
+            </p>
+            <ul className="mt-6 space-y-4 text-card-foreground">
+              <InfoItem title="Plocka upp efter hunden">
+                All hundbajs plockas upp. Rasta gärna innan ni går in i parken — bajspåsar
+                och soptunnor finns på plats.
+              </InfoItem>
+              <InfoItem title="Ingen kamphundsträning">
+                All kamphundsträning är strikt förbjuden i parkerna.
+              </InfoItem>
+              <InfoItem title="Naturlig miljö — på egen risk">
+                I parken finns kvist, stubbar, sten m.m. som kan skada både människa och hund.
+                Vid skada orsakad av naturen tar Furuhov inget ansvar.
+              </InfoItem>
+              <InfoItem title="Antal hundar">
+                Det finns ingen maxgräns för antalet hundar, men varje person ansvarar själv för
+                sin eller sina hundar.
+              </InfoItem>
+              <InfoItem title="Försäkrad, vaccinerad, avmaskad">
+                Vi ser gärna att era hundar är försäkrade, vaccinerade och avmaskade.
+              </InfoItem>
+              <InfoItem title="Pris">
+                Alla halvtimmar kostar 40 kr inkl. moms.
+              </InfoItem>
+              <InfoItem title="Koppla i god tid">
+                Koppla hunden i god tid innan din halvtimme är slut, så nästa besökare kan
+                släppa in lugnt.
+              </InfoItem>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* RULES */}
-      <section id="regler" className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <section id="regler" className="bg-secondary">
+       <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
             <h2 className="font-display text-4xl md:text-5xl tracking-wide">Parkens 10 budord</h2>
@@ -255,6 +303,7 @@ function HomePage() {
               </li>
             ))}
           </ol>
+        </div>
         </div>
       </section>
 
@@ -337,6 +386,15 @@ function ParkCard({
         Hitta hit & boka <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
       </span>
     </Link>
+  );
+}
+
+function InfoItem({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <li className="border-l-2 border-primary pl-4">
+      <h3 className="font-display text-xl tracking-wide">{title}</h3>
+      <p className="mt-1 text-sm text-card-foreground/80">{children}</p>
+    </li>
   );
 }
 
