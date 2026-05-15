@@ -332,18 +332,37 @@ function HomePage() {
       </section>
 
       {/* REVIEWS */}
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <div className="max-w-2xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Recensioner</p>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-wide">Vad våra besökare säger</h2>
-          <p className="mt-3 text-muted-foreground">
-            Hundägare från Östersund, Ås och övriga Jämtland delar med sig av sina besök på Furuhov.
-          </p>
+      <section className="py-16 md:py-20 overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-primary font-semibold">Recensioner</p>
+            <h2 className="mt-3 font-display text-4xl md:text-5xl tracking-wide">Vad våra besökare säger</h2>
+            <p className="mt-3 text-muted-foreground">
+              Hundägare från Östersund, Ås och övriga Jämtland delar med sig av sina besök på Furuhov.
+            </p>
+          </div>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {REVIEWS.map((r, i) => (
-            <ReviewCard key={i} {...r} />
-          ))}
+        <div className="mt-10 marquee-mask overflow-hidden">
+          <div className="marquee-track flex gap-5">
+            {[...REVIEWS, ...REVIEWS].map((r, i) => (
+              <div key={i} className="w-[300px] sm:w-[340px] shrink-0">
+                <ReviewCard {...r} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mx-auto max-w-6xl px-4 mt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            Läs alla recensioner på{" "}
+            <a
+              href="https://furuhov.bokamera.se/reviews?sitePath=furuhov"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary hover:underline"
+            >
+              furuhov.bokamera.se/reviews
+            </a>
+          </p>
         </div>
       </section>
 
@@ -507,7 +526,7 @@ function ReviewCard({
           <Star
             key={i}
             size={16}
-            className={i < rating ? "fill-primary text-primary" : "text-muted-foreground/30"}
+            className={i < rating ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground/30"}
           />
         ))}
       </div>
