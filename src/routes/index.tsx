@@ -3,6 +3,8 @@ import { MapPin, Clock, Coins, ArrowRight, PawPrint } from "lucide-react";
 import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
 import heroImage from "@/assets/hero-as.jpg";
 import parkInfoImage from "@/assets/parkinformation.png";
+import cardOstersund from "@/assets/card-ostersund.png";
+import cardAs from "@/assets/card-as.png";
 
 const TITLE = "Hundpark i Östersund och Ås | Furuhov Hundpark";
 const DESCRIPTION =
@@ -182,12 +184,16 @@ function HomePage() {
             title="Furuhov Östersund"
             location="Furulund, Östersund"
             description="Belägen i utkanten av Östersund i Furulund. Ca 3 ha i fin park- och skogsmiljö — en naturlig mötesplats för hundar och hundägare."
+            image={cardOstersund}
+            imageAlt="Furuhov Hundparks stuga med skylt i Furulund, Östersund"
           />
           <ParkCard
             to="/as"
             title="Furuhov Ås"
             location="Längs gamla E75:an, Ås"
             description="Längs gamla E75:an nedanför Torsta. Ca 3 ha stängslad skogsmiljö med vindskydd och fikaplats — perfekt för dagens hundpromenad."
+            image={cardAs}
+            imageAlt="Skogsstig som leder fram till vindskydd vid Furuhov Hundpark i Ås"
           />
         </div>
       </section>
@@ -364,25 +370,38 @@ function ParkCard({
   title,
   location,
   description,
+  image,
+  imageAlt,
 }: {
   to: string;
   title: string;
   location: string;
   description: string;
+  image: string;
+  imageAlt: string;
 }) {
   return (
     <Link
       to={to}
-      className="group block rounded-2xl border border-border bg-card p-8 hover:border-primary hover:shadow-lg transition-all"
+      className="group relative block overflow-hidden rounded-2xl border border-border hover:border-primary hover:shadow-lg transition-all min-h-[360px]"
     >
-      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-        <MapPin size={16} /> {location}
+      <img
+        src={image}
+        alt={imageAlt}
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/70 to-forest/30" aria-hidden="true" />
+      <div className="relative flex h-full flex-col justify-end p-8 text-forest-foreground">
+        <div className="flex items-center gap-2 text-sm text-forest-foreground/80">
+          <MapPin size={16} /> {location}
+        </div>
+        <h3 className="mt-3 font-display text-3xl tracking-wide">{title}</h3>
+        <p className="mt-3 text-forest-foreground/85">{description}</p>
+        <span className="mt-6 inline-flex items-center gap-2 text-primary font-semibold">
+          Hitta hit & boka <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </span>
       </div>
-      <h3 className="mt-3 font-display text-3xl tracking-wide text-card-foreground">{title}</h3>
-      <p className="mt-3 text-card-foreground/80">{description}</p>
-      <span className="mt-6 inline-flex items-center gap-2 text-primary font-semibold">
-        Hitta hit & boka <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-      </span>
     </Link>
   );
 }
