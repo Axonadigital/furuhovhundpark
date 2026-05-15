@@ -64,7 +64,6 @@ export const Route = createFileRoute("/ostersund")({
 function OstersundPage() {
   return (
     <>
-      <Breadcrumbs current="Hundpark Östersund" />
 
       <section className="bg-forest text-forest-foreground">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
