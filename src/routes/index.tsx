@@ -184,7 +184,7 @@ function HomePage() {
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/20 via-forest/10 to-forest/40" aria-hidden="true" />
-        <div className="relative mx-auto max-w-6xl px-4 pt-36 md:pt-56 pb-28 md:pb-40">
+        <div className="relative mx-auto max-w-6xl px-4 pt-32 md:pt-48 pb-24 md:pb-32">
           <p className="font-sans text-sm uppercase tracking-[0.2em] text-primary font-semibold">
             Östersund · Ås
           </p>
