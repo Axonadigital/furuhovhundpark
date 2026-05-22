@@ -12,6 +12,7 @@ import heroImage from "@/assets/hero-furuhov.jpg";
 import parkInfoImage from "@/assets/parkinformation.png";
 import cardOstersund from "@/assets/card-ostersund.png";
 import cardAs from "@/assets/card-as.png";
+import ostersundWinter from "@/assets/ostersund-winter.jpg";
 
 const TITLE = "Hundpark i Östersund och Ås | Furuhov Hundpark";
 const DESCRIPTION =
@@ -236,8 +237,8 @@ function HomePage() {
             title="Furuhov Östersund"
             location="Furulund, Östersund"
             description="Belägen i utkanten av Östersund i Furulund. Ca 3 ha i fin park- och skogsmiljö — en naturlig mötesplats för hundar och hundägare."
-            image={cardAs}
-            imageAlt="Skogsstig som leder fram till vindskydd vid Furuhov Hundpark i Ås"
+            image={ostersundWinter}
+            imageAlt="Upplyst vindskydd i vintrig skogsmiljö vid Furuhov Hundpark i Östersund"
           />
           <ParkCard
             to="/as"
