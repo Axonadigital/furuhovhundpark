@@ -236,16 +236,16 @@ function HomePage() {
             title="Furuhov Östersund"
             location="Furulund, Östersund"
             description="Belägen i utkanten av Östersund i Furulund. Ca 3 ha i fin park- och skogsmiljö — en naturlig mötesplats för hundar och hundägare."
-            image={cardOstersund}
-            imageAlt="Furuhov Hundparks stuga med skylt i Furulund, Östersund"
+            image={cardAs}
+            imageAlt="Skogsstig som leder fram till vindskydd vid Furuhov Hundpark i Ås"
           />
           <ParkCard
             to="/as"
             title="Furuhov Ås"
             location="Längs gamla E75:an, Ås"
             description="Längs gamla E75:an nedanför Torsta. Ca 3 ha stängslad skogsmiljö med vindskydd och fikaplats — perfekt för dagens hundpromenad."
-            image={cardAs}
-            imageAlt="Skogsstig som leder fram till vindskydd vid Furuhov Hundpark i Ås"
+            image={cardOstersund}
+            imageAlt="Furuhov Hundparks stuga med skylt i Furulund, Östersund"
           />
         </div>
       </section>
