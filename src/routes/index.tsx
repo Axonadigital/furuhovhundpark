@@ -14,6 +14,7 @@ import cardOstersund from "@/assets/card-ostersund.png";
 import cardAs from "@/assets/card-as.png";
 import ostersundWinter from "@/assets/ostersund-winter.jpg";
 import heroAs from "@/assets/hero-as.jpg";
+import heroOstersund from "@/assets/hero-as-forest.jpg";
 
 const TITLE = "Hundpark i Östersund och Ås | Furuhov Hundpark";
 const DESCRIPTION =
@@ -179,8 +180,8 @@ function HomePage() {
       {/* HERO */}
       <section className="relative bg-forest text-forest-foreground overflow-hidden">
         <img
-          src={ostersundWinter}
-          alt="Upplyst vindskydd i vintrig skogsmiljö vid Furuhov Hundpark i Östersund"
+          src={heroOstersund}
+          alt="Hund springer på stig i skogsmiljö vid Furuhov Hundpark i Östersund"
           className="absolute inset-1 h-full w-full object-cover object-center"
           loading="eager"
           fetchPriority="high"
