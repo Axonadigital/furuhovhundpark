@@ -14,6 +14,7 @@ import cardOstersund from "@/assets/card-ostersund.png";
 import cardAs from "@/assets/card-as.png";
 import ostersundWinter from "@/assets/ostersund-winter.jpg";
 import heroAs from "@/assets/hero-as.jpg";
+import heroOstersund from "@/assets/hero-as-forest.jpg";
 
 const TITLE = "Hundpark i Östersund och Ås | Furuhov Hundpark";
 const DESCRIPTION =
