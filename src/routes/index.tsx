@@ -178,8 +178,8 @@ function HomePage() {
       {/* HERO */}
       <section className="relative bg-forest text-forest-foreground overflow-hidden">
         <img
-          src={parkInfoImage}
-          alt="Furuhov Hundpark — stängslad skogsmiljö med vindskydd och fikaplats"
+          src={ostersundWinter}
+          alt="Upplyst vindskydd i vintrig skogsmiljö vid Furuhov Hundpark i Östersund"
           className="absolute inset-1 h-full w-full object-cover object-center"
           loading="eager"
           fetchPriority="high"
