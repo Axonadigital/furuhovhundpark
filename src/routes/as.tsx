@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, Coins } from "lucide-react";
-import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
+import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { Breadcrumbs, CtaSection } from "./ostersund";
 import heroAs from "@/assets/hero-as.jpg";
 
@@ -11,9 +11,11 @@ const DESCRIPTION =
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": `${SITE_URL}/as#localbusiness`,
   name: `${SITE_NAME} Ås`,
   description: DESCRIPTION,
-  url: "/as",
+  url: `${SITE_URL}/as`,
+  image: `${SITE_URL}/og-image.png`,
   telephone: PHONE,
   email: EMAIL,
   priceRange: "40 SEK / 30 min",
@@ -37,8 +39,8 @@ const breadcrumbsJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Start", item: "/" },
-    { "@type": "ListItem", position: 2, name: "Hundpark Ås", item: "/as" },
+    { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Hundpark Ås", item: `${SITE_URL}/as` },
   ],
 };
 
@@ -49,12 +51,12 @@ export const Route = createFileRoute("/as")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/as" },
+      { property: "og:url", content: `${SITE_URL}/as` },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/as" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/as` }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(businessJsonLd) },
       { type: "application/ld+json", children: JSON.stringify(breadcrumbsJsonLd) },

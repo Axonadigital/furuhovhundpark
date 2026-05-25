@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
+import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME, SITE_URL } from "@/lib/seo";
 import heroImage from "@/assets/hero-furuhov.jpg";
 import parkInfoImage from "@/assets/parkinformation.png";
 import cardOstersund from "@/assets/card-ostersund.png";
@@ -23,13 +23,15 @@ const DESCRIPTION =
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": `${SITE_URL}/#localbusiness`,
   name: SITE_NAME,
   description: DESCRIPTION,
-  url: "/",
+  url: `${SITE_URL}/`,
   telephone: PHONE,
   email: EMAIL,
   priceRange: "40 SEK / 30 min",
-  image: "/og-default.png",
+  image: `${SITE_URL}/og-image.png`,
+  logo: `${SITE_URL}/android-chrome-512x512.png`,
   areaServed: [
     { "@type": "City", name: "Östersund" },
     { "@type": "Place", name: "Ås, Krokoms kommun" },
@@ -53,6 +55,13 @@ const localBusinessJsonLd = {
     addressLocality: "Östersund",
     addressRegion: "Jämtland",
     addressCountry: "SE",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    reviewCount: "6",
   },
 };
 
@@ -102,12 +111,12 @@ export const Route = createFileRoute("/")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(localBusinessJsonLd) },
       { type: "application/ld+json", children: JSON.stringify(faqJsonLd) },

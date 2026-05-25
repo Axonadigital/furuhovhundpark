@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, Coins, ChevronRight } from "lucide-react";
-import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
+import { BOKA_URL, EMAIL, PHONE, PHONE_DISPLAY, SITE_NAME, SITE_URL } from "@/lib/seo";
 import heroOstersund from "@/assets/hero-as-forest.jpg";
 
 const TITLE = "Hundpark i Östersund — Furuhov | Boka tid";
@@ -10,9 +10,11 @@ const DESCRIPTION =
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": `${SITE_URL}/ostersund#localbusiness`,
   name: `${SITE_NAME} Östersund`,
   description: DESCRIPTION,
-  url: "/ostersund",
+  url: `${SITE_URL}/ostersund`,
+  image: `${SITE_URL}/og-image.png`,
   telephone: PHONE,
   email: EMAIL,
   priceRange: "40 SEK / 30 min",
@@ -36,8 +38,8 @@ const breadcrumbsJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Start", item: "/" },
-    { "@type": "ListItem", position: 2, name: "Hundpark Östersund", item: "/ostersund" },
+    { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Hundpark Östersund", item: `${SITE_URL}/ostersund` },
   ],
 };
 
@@ -48,12 +50,12 @@ export const Route = createFileRoute("/ostersund")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/ostersund" },
+      { property: "og:url", content: `${SITE_URL}/ostersund` },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/ostersund" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/ostersund` }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(businessJsonLd) },
       { type: "application/ld+json", children: JSON.stringify(breadcrumbsJsonLd) },

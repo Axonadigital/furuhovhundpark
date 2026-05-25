@@ -11,7 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ORG_JSONLD, SITE_NAME } from "@/lib/seo";
+import { ORG_JSONLD, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -78,21 +78,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#1a2418" },
+      { name: "author", content: SITE_NAME },
+      { name: "robots", content: "index, follow" },
       { property: "og:site_name", content: SITE_NAME },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "sv_SE" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Furuhov Hundpark" },
-      { property: "og:title", content: "Furuhov Hundpark" },
-      { name: "twitter:title", content: "Furuhov Hundpark" },
-      { name: "description", content: "Furuhov Hundpark offers two dog parks near central Östersund for dog owners to exercise their pets." },
-      { property: "og:description", content: "Furuhov Hundpark offers two dog parks near central Östersund for dog owners to exercise their pets." },
-      { name: "twitter:description", content: "Furuhov Hundpark offers two dog parks near central Östersund for dog owners to exercise their pets." },
-      { property: "og:image", content: "/og-image.png" },
-      { name: "twitter:image", content: "/og-image.png" },
+      { title: SITE_NAME },
+      { property: "og:title", content: SITE_NAME },
+      { name: "twitter:title", content: SITE_NAME },
+      { name: "description", content: SITE_DESCRIPTION },
+      { property: "og:description", content: SITE_DESCRIPTION },
+      { name: "twitter:description", content: SITE_DESCRIPTION },
+      { property: "og:image", content: `${SITE_URL}/og-image.png` },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1536" },
+      { property: "og:image:height", content: "1024" },
+      { property: "og:image:alt", content: "Furuhov Hundpark — logotyp" },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
+      { name: "twitter:image:alt", content: "Furuhov Hundpark — logotyp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },

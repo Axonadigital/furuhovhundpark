@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, Mail, Phone, Facebook, ExternalLink } from "lucide-react";
-import { BOKA_URL, EMAIL, FACEBOOK_URL, PHONE, PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
+import { BOKA_URL, EMAIL, FACEBOOK_URL, PHONE, PHONE_DISPLAY, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const TITLE = "Kontakt | Furuhov Hundpark Östersund & Ås";
 const DESCRIPTION =
@@ -10,8 +10,8 @@ const breadcrumbsJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Start", item: "/" },
-    { "@type": "ListItem", position: 2, name: "Kontakt", item: "/kontakt" },
+    { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Kontakt", item: `${SITE_URL}/kontakt` },
   ],
 };
 
@@ -19,7 +19,7 @@ const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: `Kontakt — ${SITE_NAME}`,
-  url: "/kontakt",
+  url: `${SITE_URL}/kontakt`,
 };
 
 export const Route = createFileRoute("/kontakt")({
@@ -29,12 +29,12 @@ export const Route = createFileRoute("/kontakt")({
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
-      { property: "og:url", content: "/kontakt" },
+      { property: "og:url", content: `${SITE_URL}/kontakt` },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/kontakt" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/kontakt` }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(breadcrumbsJsonLd) },
       { type: "application/ld+json", children: JSON.stringify(contactJsonLd) },
